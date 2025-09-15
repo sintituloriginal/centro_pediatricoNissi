@@ -1,0 +1,60 @@
+url: "https://nissicentropediatrico.netlify.app"   # pon tu dominio real de Netlify
+baseurl: "" 
+
+# Site settings
+title: Centro pediátrico integral
+logo: img/logo2.png
+email: your-email@domain.com
+description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+
+
+# Team names, titles and social links
+people:
+- name: Kay Garland
+  pic: 1
+  position: Lead Designer
+  social:
+    - title: twitter
+      url: #
+    - title: facebook
+      url: #
+    - title: stack-overflow
+      url: #
+
+- name: Larry Parker
+  pic: 2
+  position: Lead Marketer
+  social:
+    - title: twitter
+      url: #
+    - title: facebook
+      url: #
+    - title: linkedin
+      url: #
+
+- name: Diana Petersen
+  pic: 3
+  position: Lead Developer
+  social:
+    - title: twitter
+      url: #
+    - title: facebook
+      url: #
+    - title: google-plus
+      url: #
+
+# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+social:
+  - title: instagram
+    url: https://www.instagram.com/cpi.nissi/?igsh=cWZ0ajVxejJpb2Yy#
+  - title: facebook
+    url: https://web.facebook.com/profile.php?id=61580357096755
+
+# Postal address (add as many lines as necessary)
+address:
+  - line: 1 sur esquina 2 poniente
+  - line: Talca, región del Maule
+
+# Build settings
+markdown: kramdown
+permalink: pretty
