@@ -265,6 +265,9 @@ fieldset[disabled] .btn-xl.active {
     }
 }
 
+.fondo_general {
+  background-color: #F4F4EC !important;
+}
 
 .navbar-cta li { margin-left: 0 !important; }
 
@@ -318,43 +321,64 @@ fieldset[disabled] .btn-xl.active {
 }
 
 header {
-    text-align: center;
-    color: #fff;
-    background-attachment: scroll;
-    background-image: url('{{ site.baseurl }}/img/header-bg.jpg');
-    background-position: center center;
-    background-repeat: none;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+  position: relative;
+  text-align: center;
+  color: #fff;
+  background-attachment: scroll;
+  background-image: url('{{ site.baseurl }}/img/header-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  background-color: #F4F4EC !important;
+
+  min-height: 100dvh;   /* alto real en móviles */
+  width: 100%;
 }
 
 .logo-container {
   position: relative;
   width: 100%;
-  height: 60vh;           /* altura fija para que no baje lo de abajo */
-  overflow: visible;      /* por si el logo crece un poco más allá */
+  height: 60vh;
+  overflow: visible;
 }
 
 .logo-intro-absolute {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%); /* base centrado */
+  transform: translate(-50%,-50%);
   max-width: 90vw;
   max-height: 90%;
   height: auto;
   width: auto;
+  z-index: 2;                 /* por si acaso, sobre el fondo */
 }
 
-/* Notebook/desktop: lo “agrandas” visualmente sin cambiar alturas */
+/* Desktop: agranda un poco el logo */
 @media (min-width: 1024px) {
-  .logo-intro-absolute {
-    transform: translate(-50%, -65%) scale(1.25); /* ~25% más grande */
-    will-change: transform;
-  }
+  .logo-intro-absolute { transform: translate(-50%, -65%) scale(1.25); }
 }
+
+/* --------- MOBILE TUNING --------- */
+@media (max-width: 768px) {
+  /* 1) Sube el logo solo un poco, pero sin que quede tan alto */
+  .logo-intro-absolute {
+    transform: translate(-50%, -58%);   /* antes -62%, ahora -58% => más cerca del centro */
+    max-width: 88vw;                    /* un poco más grande, más protagonista */
+  }
+
+  /* 2) Ajusta el fondo para acercarse al logo sin montarlo */
+  header {
+    background-size: 115% auto;         /* menos zoom que antes */
+    background-position: center 78%;    /* antes 85%, ahora 78% => el gráfico queda más arriba */
+    padding-top: 4vh;                   /* menos espacio arriba */
+    padding-bottom: 6vh;                /* menos espacio abajo */
+  }
+
+  /* 3) Ajusta el alto del contenedor del logo */
+  .logo-container { height: 58vh; }
+}
+
 
 
 header .intro-text {
