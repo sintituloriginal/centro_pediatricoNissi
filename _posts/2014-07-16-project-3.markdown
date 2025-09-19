@@ -1,11 +1,11 @@
 ---
-title: Golden
+title: Clases de música
 subtitle: Website Design
 layout: default
 modal-id: 3
 date: 2014-07-16
-img: golden.png
-thumbnail: golden-thumbnail.png
+img: musica.jpg
+thumbnail: musica.jpg
 alt: image-alt
 project-date: April 2014
 client: Start Bootstrap

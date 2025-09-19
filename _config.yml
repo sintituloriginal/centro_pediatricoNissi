@@ -10,9 +10,9 @@ description: "Write an awesome description for your new site here. You can edit 
 
 # Team names, titles and social links
 people:
-- name: Kay Garland
+- name: Marlenne Fernandoy Abarca
   pic: 1
-  position: Lead Designer
+  position: Urgencias pediátricas
   social:
     - title: twitter
       url: #
@@ -21,9 +21,9 @@ people:
     - title: stack-overflow
       url: #
 
-- name: Larry Parker
+- name: Ricardo Mella Rodriguez
   pic: 2
-  position: Lead Marketer
+  position: Profesor de música
   social:
     - title: twitter
       url: #
@@ -32,9 +32,20 @@ people:
     - title: linkedin
       url: #
 
-- name: Diana Petersen
+- name: Josefa Olivares Aliaga
   pic: 3
-  position: Lead Developer
+  position: Matrona
+  social:
+    - title: twitter
+      url: #
+    - title: facebook
+      url: #
+    - title: google-plus
+      url: #
+
+- name: Susana Perez Neira
+  pic: 3
+  position: Matrona
   social:
     - title: twitter
       url: #

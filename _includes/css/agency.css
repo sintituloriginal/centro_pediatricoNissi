@@ -450,8 +450,17 @@ section h3.section-subheading {
     section {
         padding: 150px 0;
     }
+
+    .colummns_mobil {
+        margin-top: 20px;
+    }
 }
 
+
+   .colummns_mobil {
+        margin-top: 20px;
+    }
+    
 .service-heading {
     margin: 15px 0;
     text-transform: none;
