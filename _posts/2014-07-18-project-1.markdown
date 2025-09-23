@@ -8,7 +8,7 @@ date: 2014-07-18
 thumbnail: "https://scontent.cdninstagram.com/v/t51.2885-15/e35/XXXXXXX_n.jpg?...&ccb=1-7"
 
 # link al post (embed oficial)
-instagram_url: "https://www.instagram.com/p/DOqvfNVjXsi/"
+instagram_url: "https://www.instagram.com/p/DOqvfNVjXsi"
 
 alt: "Consulta Matrona"
 category: Web Development
