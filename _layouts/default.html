@@ -17,42 +17,23 @@
     {% include js.html %}
 
 
-<script async defer src="https://www.instagram.com/embed.js"></script>
+<link rel="preconnect" href="https://www.instagram.com">
+<link rel="preconnect" href="https://scontent.cdninstagram.com">
+
+<script
+  src="https://www.instagram.com/embed.js"
+  async defer
+  onload="window.instgrm && instgrm.Embeds && instgrm.Embeds.process();">
+</script>
+<script
+  src="https://www.instagram.com/embed.js"
+  async defer
+  onload="window.instgrm && instgrm.Embeds && instgrm.Embeds.process();">
+</script>
 <script>
-function mountInstagram(el, url){
-  el.innerHTML = `
-    <div class="ig-embed-holder" style="position:absolute; inset:0;">
-      <blockquote class="instagram-media"
-                  data-instgrm-permalink="${url}"
-                  data-instgrm-version="14"
-                  style="margin:0 auto; max-width:100%; width:100%;"></blockquote>
-    </div>`;
-  if (window.instgrm && instgrm.Embeds) instgrm.Embeds.process();
-}
-
-document.addEventListener('click', function(e){
-  const btn = e.target.closest('.news-play');
-  if(!btn) return;
-
-  const media = btn.closest('.ig-media');
-  if(!media) return;
-
-  const url = (media.dataset.ig || '').replace(/\/?$/, '/'); // asegura slash final
-
-  // Cierra otros embeds (vuelve a su poster)
-  document.querySelectorAll('.ig-media.ig-loaded').forEach(el=>{
-    if(el === media) return;
-    const poster = el.dataset.poster;
-    el.classList.remove('ig-loaded');
-    el.innerHTML = `
-      <img class="news-thumb" src="${poster}" alt="">
-      <button class="news-play" type="button" aria-label="Reproducir"><i class="fa fa-play"></i></button>
-    `;
+  document.addEventListener('DOMContentLoaded', function(){
+    if (window.instgrm && instgrm.Embeds) instgrm.Embeds.process();
   });
-
-  media.classList.add('ig-loaded');
-  mountInstagram(media, url);
-});
 </script>
 
     </body>
