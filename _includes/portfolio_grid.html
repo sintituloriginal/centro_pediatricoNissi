@@ -1,29 +1,50 @@
-<!-- Portfolio Grid Section -->
-    <section id="portfolio" class="bg-light-gray fondo_general">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Prestaciones</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                </div>
-            </div>
-            <div class="row">
-            {% for post in site.posts %}
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/{{ post.thumbnail }}" class="img-responsive img-centered" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>{{ post.title }}</h4>
-                        <!-- <p class="text-muted">{{ post.subtitle }}</p> -->
-                    </div>
-                </div>
-            {% endfor %}
-            </div>
-        </div>
-    </section>
+<section id="noticias" class="news-section fondo_general">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading">Noticias</h2>
+        <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+      </div>
+    </div>
+
+ <div class="news-grid">
+  {% for post in site.posts %}
+
+  {% if post.instagram_url %}
+    <!-- Solo el embed de Instagram, sin card de contenido -->
+    <article class="news-card ig-only">
+      <div class="ig-media">
+        <blockquote class="instagram-media"
+                    data-instgrm-permalink="{{ post.instagram_url | append: '/' | replace: '///','/' | replace: '//','/' }}"
+                    data-instgrm-version="14"
+                    style="margin:0; max-width:100%; width:100%; background:#fff; border:0;">
+        </blockquote>
+      </div>
+    </article>
+  {% else %}
+    <!-- Card normal (imagen + contenido) para posts sin Instagram -->
+    <article class="news-card">
+      <a class="news-card__media" href="{{ post.url | relative_url }}">
+        <img class="news-thumb"
+             src="{{ site.baseurl }}/img/portfolio/{{ post.thumbnail }}"
+             alt="{{ post.alt | default: post.title }}" loading="lazy">
+      </a>
+      <div class="news-card__content">
+        <a class="news-card__title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <span class="news-card__meta">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d %b %Y" }}</time>
+          {% if post.category %} · {{ post.category }}{% endif %}
+        </span>
+        <p class="news-card__excerpt">
+          {{ post.excerpt | default: post.description | strip_html | truncate: 120 }}
+        </p>
+        <a class="news-card__cta" href="{{ post.url | relative_url }}">Leer más →</a>
+      </div>
+    </article>
+  {% endif %}
+
+  {% endfor %}
+</div>
+
+  </div>
+</section>

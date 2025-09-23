@@ -1,15 +1,17 @@
 ---
-title: Consulta Pediátrica Morbilidad
-subtitle: Website Design
+title: Consulta Matrona
 layout: default
 modal-id: 2
-date: 2014-07-17
-img: morbilidad.jpg
-thumbnail: morbilidad.jpg
-alt: image-alt
-project-date: April 2014
-client: Start Bootstrap
-category: Web Development
-description: Lorem ipsum dolor sit amet, usu cu alterum nominavi lobortis. At duo novum diceret. Tantas apeirian vix et, usu sanctus postulant inciderint ut, populo diceret necessitatibus in vim. Cu eum dicam feugiat noluisse.
+date: 2014-07-18
 
+# preview del video de IG (copiada a mano)
+thumbnail: "https://scontent.cdninstagram.com/v/t51.2885-15/e35/XXXXXXX_n.jpg?...&ccb=1-7"
+
+# link al post (embed oficial)
+instagram_url: "https://www.instagram.com/p/DO6bGldjUDm/"
+
+alt: "Consulta Matrona"
+category: Web Development
+description: >
+  Texto de prueba de la noticia.
 ---
