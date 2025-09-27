@@ -871,14 +871,25 @@ section h3.section-subheading {
     }
 }
 
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.team-grid > [class*="col-"] {
+  display: flex;            /* para que .team-member pueda estirarse */
+}
+
 .team-member {
-    margin-bottom: 50px;
-    text-align: center;
+  flex: 1 1 auto;           /* que ocupe el alto disponible */
+  width: 100%;
+  margin-bottom: 50px;
+  text-align: center;
 }
 
 .team-member img {
-    margin: 0 auto;
-    border: 7px solid #fff;
+  margin: 0 auto;
+  border: 7px solid #fff;
 }
 
 .team-member h4 {

@@ -10,17 +10,6 @@ description: "Write an awesome description for your new site here. You can edit 
 
 # Team names, titles and social links
 people:
-- name: Marlenne Fernandoy Abarca
-  pic: 1
-  position: Urgencias pediátricas
-  social:
-    - title: twitter
-      url: #
-    - title: facebook
-      url: #
-    - title: stack-overflow
-      url: #
-
 - name: Ricardo Mella Rodriguez
   pic: 2
   position: Profesor de música
@@ -30,6 +19,17 @@ people:
     - title: facebook
       url: #
     - title: linkedin
+      url: #
+
+- name: Susana Perez Neira
+  pic: 1
+  position: Enfermera
+  social:
+    - title: twitter
+      url: #
+    - title: facebook
+      url: #
+    - title: google-plus
       url: #
 
 - name: Josefa Olivares Aliaga
@@ -42,10 +42,9 @@ people:
       url: #
     - title: google-plus
       url: #
-
-- name: Susana Perez Neira
-  pic: 3
-  position: Matrona
+- name: Bárbara Araneda
+  pic: 4
+  position: Nutricionista
   social:
     - title: twitter
       url: #
@@ -53,7 +52,26 @@ people:
       url: #
     - title: google-plus
       url: #
-
+- name: Carlos Valdéz 
+  pic: 5
+  position: Profesor de ingles y orientador vocacional
+  social:
+    - title: twitter
+      url: #
+    - title: facebook
+      url: #
+    - title: google-plus
+      url: #
+- name: Scarlett Arraño 
+  pic: 6
+  position: Psicología infanto juvenil
+  social:
+    - title: twitter
+      url: #
+    - title: facebook
+      url: #
+    - title: google-plus
+      url: #
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
   - title: instagram
