@@ -224,9 +224,51 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default .navbar-nav>.active>a {
     border-radius: 0;
-    color: #fff;
-    background-color: #{{ site.data.template.color.primary }};
+    color: #21cdc0;
+    /* background-color: #{{ site.data.template.color.primary }}; */
 }
+
+
+
+    #wsp-fab {
+        position: fixed;
+        right: 18px;
+        bottom: 18px;
+        z-index: 2147483647;
+        width: 72px;
+        height: 42px;
+        border-radius: 26px;
+        background: #25D366;
+        color: #fff;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, .2);
+        text-decoration: none;
+        transition: transform .15s ease, box-shadow .15s ease;
+      }
+
+      #wsp-fab:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, .25);
+      }
+
+      #wsp-fab:active {
+        transform: scale(0.96);
+      }
+
+      @media (max-width: 480px) {
+        #wsp-fab {
+          right: 14px;
+          bottom: 14px;
+          width: 66px;
+          height: 38px;
+        }
+        #wsp-fab svg {
+          width: 18px;
+          height: 18px;
+        }
+      }
 
 .navbar-default .navbar-nav>.active>a:hover,
 .navbar-default .navbar-nav>.active>a:focus {
@@ -880,6 +922,56 @@ section h3.section-subheading {
   display: flex;            /* para que .team-member pueda estirarse */
 }
 
+
+  .top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    color: #000;
+    font-size: 14px;
+    padding: 6px 0;
+    border-bottom: 1px solid #eee;
+    z-index: 1031; /* por encima del navbar */
+  }
+
+  .top-bar a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .top-bar a:hover {
+    text-decoration: underline;
+  }
+
+  .top-bar i {
+    margin-right: 5px;
+    color: #000;
+  }
+
+  /* Ajusta el navbar debajo de la franja */
+  .navbar-fixed-top {
+    top: 30px; /* altura estándar de la franja */
+  }
+
+  /* En pantallas pequeñas: apilar contenido y evitar tapar el header */
+  @media (max-width: 767px) {
+    .top-bar {
+      position: static; /* se vuelve parte del flujo normal */
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    .navbar-fixed-top {
+      top: 0; /* vuelve al borde superior */
+    }
+
+    .text-center-xs {
+      text-align: center !important;
+    }
+  }
 .team-member {
   flex: 1 1 auto;           /* que ocupe el alto disponible */
   width: 100%;

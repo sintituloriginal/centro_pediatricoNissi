@@ -87,3 +87,7 @@ address:
 # Build settings
 markdown: kramdown
 permalink: pretty
+plugins:
+  - jekyll-paginate
+paginate: 6
+paginate_path: "/page:num/"
